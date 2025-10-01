@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/**=============================================
+====== CORES, FONTE E CONFIGURAÇÃO DO MENU====== 
+==============================================**/
+:root {
+    --cinza-escuro: #030303;
+    --cinza-médio: #505050;
+    --cinza-claro: #e1e1e1;
+    --amarelo-claro: #faf9f6;
+    --azul-marinho: #003e66;
+    --verde-garrafa: #3c7a52;
+    --lilás: #6e5aa2;
+    --amarelo-pastel: #f5f198;
+    --fonte-principal: 'Poppins', sans-serif;
+    --fonte-secundaria: 'Monsieur La Doulaise', cursive;
+}
+
+body {
+    background-color: var(--amarelo-claro);
+    color: var(--cinza-escuro);
+}
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    background: #faf9f6;
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 12.8rem;
+}
+
+/**--- Página Inicial ---**/
+.pi-link {
+    position: relative;
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--cinza-escuro);
+    padding: 0.5rem 0;    
+}
+.pi-link:hover {
+    color: var(--lilás); 
+    transition: color 0.3s ease; 
+}
+.pi-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--lilás);
+    color: var(--lilás);
+    transition: width 0.3s ease;
+}
+.pi-link:hover::before {
+    width: 100%;
+}
+
+/**--- Sobre Mim ---**/
+.sm-link {
+    position: relative;
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--cinza-escuro);
+    padding: 0.5rem 0;    
+}
+.sm-link:hover {
+    color: var(--azul-marinho); 
+    transition: color 0.3s ease; 
+}
+.sm-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--azul-marinho);
+    color: var(--azul-marinho);
+    transition: width 0.3s ease;
+}
+.sm-link:hover::before {
+    width: 100%;
+}
+
+/**--- Formação Acadêmica ---**/
+.fa-link {
+    position: relative;
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--cinza-escuro);
+    padding: 0.5rem 0;    
+}
+.fa-link:hover {
+    color: var(--verde-garrafa); 
+    transition: color 0.3s ease; 
+}
+.fa-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--verde-garrafa);
+    color: var(--verde-garrafa);
+    transition: width 0.3s ease;
+}
+.fa-link:hover::before {
+    width: 100%;
+}
+
+/**--- Certificações e Conquistas ---**/
+.certcon-link {
+    position: relative;
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--cinza-escuro);
+    padding: 0.5rem 0;    
+}
+.certcon-link:hover {
+    color: var(--lilás); 
+    transition: color 0.3s ease; 
+}
+.certcon-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--lilás);
+    color: var(--lilás);
+    transition: width 0.3s ease;
+}
+.certcon-link:hover::before {
+    width: 100%;
+}
+
+/**--- Projetos ---**/
+.proj-link {
+    position: relative;
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--cinza-escuro);
+    padding: 0.5rem 0;    
+}
+.proj-link:hover {
+    color: var(--azul-marinho); 
+    transition: color 0.3s ease; 
+}
+.proj-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--azul-marinho);
+    color: var(--azul-marinho);
+    transition: width 0.3s ease;
+}
+.proj-link:hover::before {
+    width: 100%;
+}
+
+/**--- Contatos ---**/
+.cont-link {
+    position: relative;
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--cinza-escuro);
+    padding: 0.5rem 0;    
+}
+.cont-link:hover {
+    color: var(--verde-garrafa); 
+    transition: color 0.3s ease; 
+}
+.cont-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--verde-garrafa);
+    color: var(--verde-garrafa);
+    transition: width 0.3s ease;
+}
+.cont-link:hover::before {
+    width: 100%;
+}
+
+
+/**==========================
+======== CONTEÚDO ===========
+==========================**/
+
+/**---- Imagem Principal ----**/
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagem-pi {
+    width: 2500px;
+    padding: 1.5rem 0;
+}
+
+/**---- Sobre Mim ----**/
+.sobremim {
+    padding: 13rem 6rem;
+}
+.sobre-titulo {
+    font-size: 10rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--azul-marinho);
+    text-align: right;
+}
+.sobre-texto {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    text-align: justify;
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    color: var(--cinza-escuro);
+}
+.sobre-conteudo {
+    padding: 9rem;
+    max-width: 3000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    background-color: #003d663f;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 
+                0 10px 60px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+.sobre-conteudo:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/**---- Formação Acadêmica ----**/
+.formacaoacademica {
+    padding: 13rem 6rem;
+}
+.fa-titulo {
+    font-size: 8rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--verde-garrafa);
+    text-align: right;
+}
+.fa-lista {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    text-align: justify;
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    color: var(--cinza-escuro);
+    list-style: none;
+}
+.fa-conteudo {
+    padding: 17rem;
+    max-width: 3000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    background-color: #3c7a5244;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 
+                0 10px 60px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+.fa-conteudo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/**---- Certificações e Conquistas ----**/
+.certificacoeseconquistas {
+    padding: 13rem 6rem;
+}
+.certcon-titulo {
+    font-size: 8rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--lilás);
+    text-align: right;
+}
+.certcon-lista {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    text-align: justify;
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    color: var(--cinza-escuro);
+    list-style: none;
+}
+.certcon-conteudo {
+    padding: 17rem;
+    max-width: 3000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    background-color: #6e5aa241;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 
+                0 10px 60px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+.certcon-conteudo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/**---- Projetos ----**/
+.projetos {
+    padding: 13rem 6rem;
+}
+.proj-titulo {
+    font-size: 8rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--azul-marinho);
+    text-align: right;
+}
+.proj-lista {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    text-align: justify;
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    color: var(--cinza-escuro);
+    list-style: none;
+}
+.proj-conteudo {
+    padding: 17rem;
+    max-width: 3000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    background-color: #003d6650;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 
+                0 10px 60px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+.proj-conteudo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/**---- Contatos ----**/
+.contatos {
+    padding: 13rem 6rem;
+}
+.cont-titulo {
+    font-size: 8rem;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    color: var(--amarelo-claro);
+    text-align: center;
+}
+.cont-form {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #319755;
+}
+
+.campo-form {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background: var(--amarelo-claro);
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-family: var(--fonte-principal);
+    color: var(--cinza-escuro);
+    outline: none;
+}
+.campo-form:focus {
+    border: #319755 2px solid;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+.botao-form {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #319755;
+    font-size: 3rem;
+}
+.botao-form {
+    color: var(--amarelo-claro);
+    background: linear-gradient(45deg, #05b643, #319755);
+    padding: 4rem 7rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+    transition: all 0.6s ease;
+    
+}
+.botao-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+}
+.cont-conteudo {
+    padding: 8rem;
+    max-width: 3000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    background-color: #3c7a52;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 
+                0 10px 60px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+.cont-conteudo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/**----Rodapé----**/
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+.icone-link {
+    margin: 0 20px;
+    text-decoration: none; 
+}
+.icone-imagem {
+    width: 150px;
+    height: 150px;
+    border: none;
+    object-fit: contain; 
+    transition: transform 0.3s ease;
+}
+.icone-link:hover .icone-imagem {
+    transform: scale(1.1); 
+}
